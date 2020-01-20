@@ -206,7 +206,8 @@ def process_scenario(agent, sc, preprocess):
 	return sc.submit()
 
 
-
+total_failures_detected = 0
+total_failures_missed = 0
 class PrioLearning(object):
 	def __init__(self, agent, scenario_provider, file_prefix, reward_function, output_dir, preprocess_function,
 				 dump_interval=DEFAULT_DUMP_INTERVAL, validation_interval=DEFAULT_VALIDATION_INTERVAL):
